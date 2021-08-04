@@ -33,32 +33,6 @@ public class TestRunner {
 
 	//Api test code ends here
 
-	// UI Test code is started from here
-	@Test
-	public void launchFortressISApplication() {
-		TestSessionInitiator.homepage.launchFortressISApplication();
-	}
-
-	@Test(dependsOnMethods = "launchFortressISApplication")
-	public void selectCareerOption() {
-		TestSessionInitiator.homepage.selectCareerOption();
-	}
-
-	@Test(dependsOnMethods = "selectCareerOption")
-	public void verifyCareerPageIsOpened() {
-		TestSessionInitiator.homepage.verifyCareerPageIsOpened();
-	}
-
-	@Test(dependsOnMethods = "verifyCareerPageIsOpened")
-	public void clickOnViewJobs() {
-		TestSessionInitiator.homepage.clickOnViewJobs();
-	}
-
-	@Test(dependsOnMethods = "clickOnViewJobs")
-	public void verifyJobsPageIsOpened() {
-		TestSessionInitiator.homepage.verifyJobsPageIsOpened();
-		System.out.println(">>>>>>>>>>>>>>>>>>> UI TEST has been successfully completed");
-	}
 	
 	@AfterSuite
 	public void closeSession() {
